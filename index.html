@@ -1,0 +1,862 @@
+<!DOCTYPE html>
+<html lang="ru" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Деревня Александровка — история и жизнь</title>
+
+<meta name="description" content="История и жизнь деревни Александровка Малоархангельского района Орловской области: прошлое, годы войны, послевоенные годы и день сегодняшний.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Деревня Александровка — история и жизнь">
+<meta property="og:description" content="История и жизнь деревни Александровка Малоархангельского района Орловской области.">
+<meta property="og:locale" content="ru_RU">
+
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='18' fill='%231b3a23'/><text x='50' y='68' font-size='58' text-anchor='middle' fill='%23f4dfaa' font-family='Georgia,serif'>А</text></svg>">
+
+<style>
+:root {
+    --bg-dark: #1b3a23;
+    --bg-section: rgba(30, 57, 36, .88);
+    --bg-note: rgba(15, 35, 19, .5);
+    --gold: #f4dfaa;
+    --gold-light: #fff4d6;
+    --accent: #d6bd80;
+    --text: #fff;
+    --text-soft: #f4e9cc;
+    --radius: 18px;
+    --nav-h: 88px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+    font-family: Georgia, "Times New Roman", serif;
+    color: var(--text);
+    background:
+        linear-gradient(rgba(15, 35, 19, .48), rgba(15, 35, 19, .65)),
+        url("https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=2400&q=85");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100vh;
+    line-height: 1.7;
+}
+
+body.lightbox-open { overflow: hidden; }
+
+/* ================= ШАПКА ================= */
+header {
+    text-align: center;
+    padding: 90px 20px 70px;
+    scroll-margin-top: 0;
+}
+header h1 {
+    font-size: clamp(36px, 6vw, 65px);
+    color: var(--gold-light);
+    text-shadow: 0 4px 15px #172b17;
+    margin-bottom: 18px;
+    letter-spacing: .5px;
+}
+header p {
+    font-size: 21px;
+    color: #f5f0d9;
+    text-shadow: 0 2px 8px #172b17;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 14px;
+}
+header p::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 70px;
+    height: 2px;
+    background: var(--accent);
+    border-radius: 2px;
+}
+
+/* ================= МЕНЮ ================= */
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 5px;
+    padding: 12px;
+    background: rgba(27, 58, 35, .97);
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+}
+nav a,
+.nav-button {
+    display: block;
+    color: var(--gold-light);
+    text-decoration: none;
+    padding: 11px 14px;
+    border: 0;
+    border-radius: 22px;
+    background: transparent;
+    font: inherit;
+    font-size: 15px;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: background .2s, color .2s;
+}
+nav a:hover,
+.nav-button:hover,
+nav a:focus-visible,
+.nav-button:focus-visible,
+nav a.active {
+    background: var(--accent);
+    color: #243b27;
+    outline: none;
+}
+.dropdown { position: relative; }
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 220px;
+    padding: 8px;
+    background: rgba(27, 58, 35, .98);
+    border: 1px solid rgba(255, 239, 194, .25);
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, .3);
+}
+.dropdown-menu a {
+    border-radius: 8px;
+    padding: 10px 12px;
+    white-space: normal;
+}
+.dropdown:hover .dropdown-menu,
+.dropdown:focus-within .dropdown-menu,
+.dropdown.open .dropdown-menu { display: block; }
+
+/* ================= СЕКЦИИ ================= */
+section {
+    max-width: 1050px;
+    margin: 45px auto;
+    padding: 40px;
+    width: calc(100% - 35px);
+    background: var(--bg-section);
+    border: 1px solid rgba(255, 239, 194, .25);
+    border-radius: var(--radius);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, .25);
+    scroll-margin-top: var(--nav-h);
+}
+section h2 {
+    text-align: center;
+    color: var(--gold);
+    font-size: 32px;
+    margin-bottom: 25px;
+}
+section h3 {
+    color: var(--gold);
+    font-size: 23px;
+    margin: 30px 0 15px;
+    scroll-margin-top: var(--nav-h);
+}
+section p {
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+.quote {
+    text-align: center;
+    font-size: 24px;
+    font-style: italic;
+    color: #f5dfaa;
+    margin-top: 30px;
+    line-height: 1.6;
+}
+.date { color: var(--gold); font-weight: bold; }
+.history-note {
+    margin: 22px 0;
+    padding: 20px;
+    background: var(--bg-note);
+    border-left: 4px solid var(--accent);
+    border-radius: 8px;
+    line-height: 1.7;
+    font-size: 16px;
+    color: var(--text-soft);
+}
+.history-note a { color: #f5dfaa; }
+
+/* ================= ГАЛЕРЕЯ ================= */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 14px;
+    margin-top: 20px;
+}
+.gallery img {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 239, 194, .25);
+    background: rgba(15, 35, 19, .5);
+    transition: transform .25s, box-shadow .25s;
+    display: block;
+    cursor: zoom-in;
+}
+.gallery img:hover,
+.gallery img:focus-visible {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 22px rgba(0, 0, 0, .35);
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+}
+
+/* ================= КАРТА ================= */
+.map-container {
+    width: 100%;
+    height: 420px;
+    overflow: hidden;
+    border-radius: 12px;
+    margin-top: 20px;
+}
+.map-container iframe { width: 100%; height: 100%; border: 0; }
+.map-link {
+    display: inline-block;
+    margin-top: 18px;
+    color: #f5dfaa;
+    font-size: 17px;
+}
+
+/* ================= ФУТЕР ================= */
+footer {
+    text-align: center;
+    padding: 30px 25px 22px;
+    color: var(--gold-light);
+    background: rgba(24, 52, 31, .92);
+    margin-top: 60px;
+}
+.footer-message { font-size: 18px; line-height: 1.6; }
+.creator {
+    margin-top: 18px;
+    text-align: right;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    color: var(--gold);
+}
+.creator a { color: var(--gold); text-decoration: none; font-weight: bold; }
+.creator a:hover { color: #fff; text-decoration: underline; }
+
+/* ================= КНОПКА «НАВЕРХ» ================= */
+.to-top {
+    position: fixed;
+    right: 22px;
+    bottom: 22px;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 239, 194, .4);
+    background: rgba(27, 58, 35, .92);
+    color: var(--gold-light);
+    font-size: 22px;
+    cursor: pointer;
+    display: grid;
+    place-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: opacity .25s, transform .25s, visibility .25s, background .2s;
+    z-index: 30;
+}
+.to-top.visible { opacity: 1; visibility: visible; transform: translateY(0); }
+.to-top:hover,
+.to-top:focus-visible {
+    background: var(--accent);
+    color: #243b27;
+    outline: none;
+}
+
+/* ================= ЛАЙТБОКС ================= */
+.lightbox {
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background: rgba(8, 18, 11, .92);
+    -webkit-backdrop-filter: blur(6px);
+    backdrop-filter: blur(6px);
+    padding: 20px;
+}
+.lightbox.open { display: flex; }
+.lightbox__img {
+    max-width: min(1100px, 92vw);
+    max-height: 82vh;
+    border-radius: 12px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, .6);
+    object-fit: contain;
+    background: #0d1a10;
+}
+.lightbox__caption {
+    position: absolute;
+    bottom: 22px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--gold-light);
+    font-size: 16px;
+    text-align: center;
+    max-width: 90vw;
+    text-shadow: 0 2px 8px #000;
+    padding: 0 60px;
+}
+.lightbox__counter {
+    position: absolute;
+    top: 22px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--gold);
+    font-size: 15px;
+    letter-spacing: 1px;
+    font-family: Arial, sans-serif;
+}
+.lightbox__btn {
+    position: absolute;
+    display: grid;
+    place-items: center;
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 239, 194, .35);
+    background: rgba(27, 58, 35, .85);
+    color: var(--gold-light);
+    font-size: 24px;
+    line-height: 1;
+    cursor: pointer;
+    transition: background .2s, color .2s, transform .15s;
+    z-index: 2;
+}
+.lightbox__btn:hover,
+.lightbox__btn:focus-visible {
+    background: var(--accent);
+    color: #243b27;
+    outline: none;
+}
+.lightbox__close { top: 20px; right: 20px; }
+.lightbox__prev { left: 20px; top: 50%; transform: translateY(-50%); }
+.lightbox__next { right: 20px; top: 50%; transform: translateY(-50%); }
+.lightbox__prev:hover,
+.lightbox__next:hover,
+.lightbox__prev:focus-visible,
+.lightbox__next:focus-visible {
+    transform: translateY(-50%) scale(1.06);
+}
+
+/* ================= МОБИЛЬНАЯ ================= */
+@media (max-width: 700px) {
+    body { background-attachment: scroll; }
+    :root { --nav-h: 140px; }
+    header { padding: 60px 15px 45px; }
+    header p { font-size: 18px; }
+    nav { justify-content: flex-start; overflow: visible; }
+    nav a,
+    .nav-button {
+        padding: 10px 11px;
+        font-size: 14px;
+        white-space: normal;
+    }
+    .dropdown { width: 100%; }
+    .dropdown > .nav-button { width: 100%; text-align: left; }
+    .dropdown-menu {
+        position: static;
+        min-width: 0;
+        width: 100%;
+        margin-top: 5px;
+        box-shadow: none;
+        background: rgba(15, 35, 19, .7);
+    }
+    .dropdown-menu a { padding: 9px 14px; }
+    section { padding: 25px 20px; margin: 30px auto; }
+    section h2 { font-size: 27px; }
+    section h3 { font-size: 21px; }
+    section p { font-size: 17px; }
+    .map-container { height: 320px; }
+    .gallery img { height: 160px; }
+    .creator { text-align: center; line-height: 1.8; }
+    .to-top { right: 14px; bottom: 14px; }
+    .lightbox__btn { width: 44px; height: 44px; font-size: 20px; }
+    .lightbox__close { top: 12px; right: 12px; }
+    .lightbox__prev { left: 10px; }
+    .lightbox__next { right: 10px; }
+    .lightbox__img { max-height: 72vh; }
+    .lightbox__caption { bottom: 14px; font-size: 14px; padding: 0 20px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    * { transition: none !important; }
+}
+</style>
+</head>
+
+<body>
+
+<header id="home">
+    <h1>Деревня Александровка</h1>
+    <p>Тихий уголок Орловской области</p>
+</header>
+
+<nav aria-label="Главное меню">
+    <a href="#home">Главная</a>
+
+    <div class="dropdown">
+        <button class="nav-button" type="button" aria-expanded="false" aria-haspopup="true">История ▾</button>
+        <div class="dropdown-menu">
+            <a href="#history">Об истории деревни</a>
+            <a href="#bricks">Кирпичная история</a>
+            <a href="#kurakin">Предание о Куракине</a>
+            <a href="#council">Ленинский сельсовет</a>
+        </div>
+    </div>
+
+    <div class="dropdown">
+        <button class="nav-button" type="button" aria-expanded="false" aria-haspopup="true">Война ▾</button>
+        <div class="dropdown-menu">
+            <a href="#war">Александровка в годы войны</a>
+            <a href="#occupation">Оккупация</a>
+            <a href="#liberation">Освобождение</a>
+        </div>
+    </div>
+
+    <div class="dropdown">
+        <button class="nav-button" type="button" aria-expanded="false" aria-haspopup="true">После войны ▾</button>
+        <div class="dropdown-menu">
+            <a href="#afterwar">Послевоенная жизнь</a>
+            <a href="#school">Школа и медпункт</a>
+            <a href="#archives">Архивные документы</a>
+        </div>
+    </div>
+
+    <div class="dropdown">
+        <button class="nav-button" type="button" aria-expanded="false" aria-haspopup="true">Сегодня ▾</button>
+        <div class="dropdown-menu">
+            <a href="#today">Деревня сегодня</a>
+            <a href="#population">Численность населения</a>
+        </div>
+    </div>
+
+    <a href="#photos">Фото</a>
+    <a href="#map">Карта</a>
+</nav>
+
+<main>
+
+<section id="home-section">
+    <h2>Добро пожаловать в Александровку!</h2>
+    <p>
+        Александровка — небольшая деревня Малоархангельского района
+        Орловской области. У каждого населённого пункта есть своя
+        история: судьбы жителей, семейные предания, трудовые будни
+        и события, которые оставили след в памяти поколений.
+    </p>
+    <p>
+        Этот сайт посвящён прошлому и настоящему нашей деревни.
+        Его цель — сохранить воспоминания и собрать воедино
+        доступные сведения об Александровке.
+    </p>
+    <div class="quote">У каждой деревни есть своя история. Главное — не дать ей забыться.</div>
+</section>
+
+<section id="history">
+    <h2>История Александровки</h2>
+    <p>
+        История Александровки складывалась на протяжении многих
+        поколений. Менялись времена, административные границы,
+        уклад жизни, но деревня оставалась домом для своих жителей.
+    </p>
+    <p>
+        О прошлом напоминают старые дома, рассказы местных жителей,
+        документы и семейные воспоминания. Часть истории ещё
+        предстоит восстановить по архивным материалам.
+    </p>
+</section>
+
+<section id="bricks">
+    <h3>Кирпичная история</h3>
+    <p>
+        Александровка и соседняя Каменка известны необычными
+        кирпичными домами. В прошлом возле некоторых домов
+        находились специальные горны, в которых обжигали кирпич.
+    </p>
+    <p>
+        Кирпичное строительство стало заметной особенностью
+        этих мест. Старые постройки до сих пор напоминают
+        о мастерстве и труде прежних поколений.
+    </p>
+</section>
+
+<section id="kurakin">
+    <h3>Предание о князе Куракине</h3>
+    <p>
+        Существует местное предание о том, что в начале XVIII века
+        князь Куракин переселил сюда людей из северных губерний.
+    </p>
+    <div class="history-note">
+        Важно: это именно местное предание. Пока не найдены
+        документальные подтверждения, его нельзя считать
+        установленным историческим фактом.
+    </div>
+</section>
+
+<section id="council">
+    <h3>Ленинский сельсовет</h3>
+    <p>
+        <span class="date">4 декабря 1918 года</span> был образован
+        Ленинский сельсовет. В июне 1954 года Ленинский и Каменский
+        сельсоветы объединились.
+    </p>
+    <p>
+        Эти события отражают изменения административной жизни
+        территории, к которой относилась Александровка.
+    </p>
+    <div class="history-note">
+        Источник:
+        <a href="https://maloarhangelsk.ru/den-leninskogo-selskogo-poseleniya/" target="_blank" rel="noopener">
+            История Ленинского сельского поселения
+        </a>
+    </div>
+</section>
+
+<section id="war">
+    <h2>Александровка в годы войны</h2>
+    <p>
+        Великая Отечественная война стала тяжёлым испытанием
+        для Орловской земли. Военные действия затронули
+        и территорию Малоархангельского района.
+    </p>
+    <p>
+        В военной хронике района Александровка упоминается
+        в записях, связанных с событиями 1943 года.
+    </p>
+</section>
+
+<section id="occupation">
+    <h3>Оккупация</h3>
+    <p>
+        Период оккупации оставил глубокий след в истории
+        Орловской области. За каждой записью в военной хронике
+        стоят судьбы людей, переживших тяжёлое время.
+    </p>
+    <p>
+        Подробные сведения именно об Александровке требуют
+        дальнейшего изучения архивных документов и воспоминаний жителей.
+    </p>
+</section>
+
+<section id="liberation">
+    <h3>Освобождение Александровки</h3>
+    <p>В районной хронике указаны две даты, связанные с Александровкой:</p>
+    <p><span class="date">19 марта 1943 года</span> — упоминается 15-я стрелковая дивизия.</p>
+    <p><span class="date">26 июля 1943 года</span> — упоминаются 74-я, 81-я и 148-я стрелковые дивизии.</p>
+    <div class="history-note">
+        В хронике присутствуют обе даты. Причина появления
+        двух записей пока не установлена, поэтому мы не будем
+        делать предположений о том, что именно произошло
+        в каждый из этих дней.
+        <br><br>
+        Источник:
+        <a href="https://maloarhangelsk.ru/chronicle-osvobozhdenie/" target="_blank" rel="noopener">
+            Хроника освобождения Малоархангельского района
+        </a>
+    </div>
+</section>
+
+<section id="afterwar">
+    <h2>Александровка после войны</h2>
+    <p>
+        После окончания войны жизнь постепенно возвращалась
+        к мирному ритму. Люди восстанавливали хозяйство,
+        работали, растили детей и занимались повседневными делами.
+    </p>
+    <p>
+        История послевоенной Александровки — это прежде всего
+        история труда, семей и нескольких поколений сельских жителей.
+    </p>
+</section>
+
+<section id="school">
+    <h3>Школа и медицинский пункт</h3>
+    <p>
+        В Александровке работала начальная школа.
+        По имеющимся сведениям, она продолжала работу до 2009 года.
+    </p>
+    <p>
+        В материалах о деревне также упоминается медицинский пункт.
+        Школа и медицинская помощь были важной частью жизни местных жителей.
+    </p>
+    <div class="history-note">
+        Точные даты открытия школы и медицинского пункта пока не установлены.
+    </div>
+</section>
+
+<section id="archives">
+    <h3>Архивные документы</h3>
+    <p>
+        В каталоге Государственного архива Орловской области
+        имеются описания документов Ленинского сельсовета
+        послевоенных лет.
+    </p>
+    <p>
+        Эти материалы могут помочь подробнее восстановить
+        историю деревни, её жителей и повседневную жизнь
+        в послевоенное время.
+    </p>
+    <div class="history-note">
+        Ознакомиться с каталогом можно здесь:
+        <a href="https://catalog.gaorel.ru/" target="_blank" rel="noopener">
+            Каталог Государственного архива Орловской области
+        </a>
+    </div>
+</section>
+
+<section id="today">
+    <h2>Александровка сегодня</h2>
+    <p>
+        Сегодня Александровка продолжает жить своей жизнью.
+        Для одних это родная деревня, для других — место,
+        где жили родители, бабушки и дедушки.
+    </p>
+    <p>
+        Сохранение истории, фотографий и воспоминаний помогает
+        не потерять связь между прошлым и настоящим.
+    </p>
+</section>
+
+<section id="population">
+    <h3>Численность населения</h3>
+    <p>
+        Данные о численности населения за разные годы помогают
+        увидеть, как менялась жизнь деревни.
+    </p>
+    <div class="history-note">
+        Исторические сведения о численности населения требуют
+        дополнительной проверки по официальным переписям.
+        Поэтому неподтверждённые цифры здесь не приводятся.
+    </div>
+</section>
+
+<section id="photos">
+    <h2>Фотографии Александровки</h2>
+    <p>
+        Здесь можно собрать фотографии деревни: старые дома,
+        улицы, природу, памятные места и снимки разных лет.
+        Нажмите на фото, чтобы увеличить.
+    </p>
+
+    <div class="gallery">
+        <img src="photos/dom-1.jpg"
+             alt="Кирпичный дом в Александровке — фото 1"
+             loading="lazy" width="600" height="400">
+        <img src="photos/dom-2.jpg"
+             alt="Кирпичный дом в Александровке — фото 2"
+             loading="lazy" width="600" height="400">
+        <img src="photos/dom-3.jpg"
+             alt="Кирпичный дом в Александровке — фото 3"
+             loading="lazy" width="600" height="400">
+    </div>
+</section>
+
+<section id="map">
+    <h2>Александровка на карте</h2>
+    <p>
+        Здесь можно посмотреть расположение деревни
+        Александровки в Малоархангельском районе Орловской области.
+    </p>
+
+    <div class="map-container">
+        <iframe
+            src="https://maps.google.com/maps?q=%D0%90%D0%BB%D0%B5%D0%BA%D1%81%D0%B0%D0%BD%D0%B4%D1%80%D0%BE%D0%B2%D0%BA%D0%B0%2C%20%D0%9C%D0%B0%D0%BB%D0%BE%D0%B0%D1%80%D1%85%D0%B0%D0%BD%D0%B3%D0%B5%D0%BB%D1%8C%D1%81%D0%BA%D0%B8%D0%B9%20%D1%80%D0%B0%D0%B9%D0%BE%D0%BD%2C%20%D0%9E%D1%80%D0%BB%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F%20%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C&t=&z=12&ie=UTF8&iwloc=&output=embed"
+            title="Карта расположения деревни Александровка"
+            loading="lazy"
+            allowfullscreen>
+        </iframe>
+    </div>
+
+    <p>
+        <a class="map-link"
+           href="https://www.google.com/maps/search/?api=1&query=%D0%90%D0%BB%D0%B5%D0%BA%D1%81%D0%B0%D0%BD%D0%B4%D1%80%D0%BE%D0%B2%D0%BA%D0%B0%2C+%D0%9C%D0%B0%D0%BB%D0%BE%D0%B0%D1%80%D1%85%D0%B0%D0%BD%D0%B3%D0%B5%D0%BB%D1%8C%D1%81%D0%BA%D0%B8%D0%B9+%D1%80%D0%B0%D0%B9%D0%BE%D0%BD%2C+%D0%9E%D1%80%D0%BB%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F+%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C"
+           target="_blank" rel="noopener">
+            Открыть карту в Google Maps
+        </a>
+    </p>
+</section>
+
+</main>
+
+<footer>
+    <div class="footer-message">
+        Александровка — место, куда хочется возвращаться.
+        История деревни продолжается...
+    </div>
+
+    <div class="creator">
+        Автор сайта:
+        <a href="https://vk.com/evgeniy57_official"
+           target="_blank" rel="noopener">
+            Журавлёв Евгений Сергеевич
+        </a>
+    </div>
+</footer>
+
+<!-- ЛАЙТБОКС -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true"
+     aria-label="Просмотр фотографий" aria-hidden="true">
+    <span class="lightbox__counter" aria-live="polite"></span>
+    <button class="lightbox__btn lightbox__close" type="button" aria-label="Закрыть">✕</button>
+    <button class="lightbox__btn lightbox__prev" type="button" aria-label="Предыдущее фото">‹</button>
+    <img class="lightbox__img" src="" alt="">
+    <button class="lightbox__btn lightbox__next" type="button" aria-label="Следующее фото">›</button>
+    <div class="lightbox__caption"></div>
+</div>
+
+<button class="to-top" type="button" aria-label="Наверх" title="Наверх">↑</button>
+
+<script>
+(function () {
+    "use strict";
+
+    /* ---------- Выпадающее меню ---------- */
+    const dropdowns = document.querySelectorAll(".dropdown");
+
+    function closeAll(except) {
+        dropdowns.forEach(function (item) {
+            if (item === except) return;
+            item.classList.remove("open");
+            const b = item.querySelector(".nav-button");
+            if (b) b.setAttribute("aria-expanded", "false");
+        });
+    }
+
+    document.querySelectorAll(".dropdown > .nav-button").forEach(function (button) {
+        button.addEventListener("click", function (e) {
+            e.stopPropagation();
+            const parent = button.parentElement;
+            const isOpen = parent.classList.contains("open");
+
+            closeAll(parent);
+
+            if (!isOpen) {
+                parent.classList.add("open");
+                button.setAttribute("aria-expanded", "true");
+            } else {
+                parent.classList.remove("open");
+                button.setAttribute("aria-expanded", "false");
+            }
+        });
+    });
+
+    document.addEventListener("click", function (e) {
+        if (!e.target.closest(".dropdown")) closeAll(null);
+    });
+
+    document.addEventListener("keydown", function (e) {
+        if (e.key === "Escape") closeAll(null);
+    });
+
+    document.querySelectorAll(".dropdown-menu a").forEach(function (link) {
+        link.addEventListener("click", function () {
+            closeAll(null);
+        });
+    });
+
+    /* ---------- Подсветка активного раздела ---------- */
+    const navLinks = Array.from(document.querySelectorAll('nav a[href^="#"]'));
+    const linkByHash = {};
+    navLinks.forEach(function (a) {
+        linkByHash[a.getAttribute("href")] = a;
+    });
+
+    const sections = Array.from(
+        document.querySelectorAll("main section[id], header[id], section#map")
+    );
+
+    function setActive(hash) {
+        navLinks.forEach(function (a) { a.classList.remove("active"); });
+        if (linkByHash[hash]) linkByHash[hash].classList.add("active");
+    }
+
+    if ("IntersectionObserver" in window && sections.length) {
+        const observer = new IntersectionObserver(function (entries) {
+            let best = null;
+            entries.forEach(function (entry) {
+                if (entry.isIntersecting) {
+                    if (!best || entry.intersectionRatio > best.intersectionRatio) {
+                        best = entry;
+                    }
+                }
+            });
+            if (best) setActive("#" + best.target.id);
+        }, {
+            rootMargin: "-40% 0px -55% 0px",
+            threshold: [0, .25, .5, .75, 1]
+        });
+
+        sections.forEach(function (s) { observer.observe(s); });
+    }
+
+    /* ---------- Кнопка «наверх» ---------- */
+    const toTop = document.querySelector(".to-top");
+
+    function toggleToTop() {
+        if (window.scrollY > 400) {
+            toTop.classList.add("visible");
+        } else {
+            toTop.classList.remove("visible");
+        }
+    }
+
+    window.addEventListener("scroll", toggleToTop, { passive: true });
+    toggleToTop();
+
+    toTop.addEventListener("click", function () {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+
+    /* ---------- Лайтбокс ---------- */
+    const galleryImages = Array.from(document.querySelectorAll(".gallery img"));
+    const lightbox = document.getElementById("lightbox");
+    if (!lightbox || !galleryImages.length) return;
+
+    const lbImg = lightbox.querySelector(".lightbox__img");
+    const lbCaption = lightbox.querySelector(".lightbox__caption");
+    const lbCounter = lightbox.querySelector(".lightbox__counter");
+    const btnClose = lightbox.querySelector(".lightbox__close");
+    const btnPrev = lightbox.querySelector(".lightbox__prev");
+    const btnNext = lightbox.querySelector(".lightbox__next");
+
+    let currentIndex = 0;
+    let lastFocused = null;
+
+    function showImage(index) {
+        currentIndex = (index + galleryImages.length) % galleryImages.length;
+        const img = galleryImages[currentIndex];
+        const fullSrc = img.dataset.full || img.src;
+        lbImg.src = fullSrc;
+        lbImg.alt = img.alt || "";
+        lbCaption.textContent = img.alt || "";
+        lbCounter.textContent = (currentIndex + 1) + " / " + galleryImages.length;
+    }
+
+    function openLightbox(index) {
+        lastFocused = document.activeElement;
+        showImage(index);
+        lightbox.classList.add("open");
+        lightbox.setAttribute("aria-hidden", "false");
+        document.body.classList.add("lightbox-open");
+        btnClose.focus();
+    }
+
+    function closeLightbox() {
+        lightbox.classList.remove
